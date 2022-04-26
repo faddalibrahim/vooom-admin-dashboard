@@ -1,0 +1,18 @@
+.error404 {
+  width: 100vw;
+  height: 100vh;
+  display: grid;
+  overflow-x: hidden;
+  place-items: center;
+  padding: 0 1rem;
+
+  strong {
+    color: crimson;
+  }
+
+  svg {
+    width: 70%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+}
