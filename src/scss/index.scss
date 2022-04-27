@@ -1,5 +1,7 @@
 @import url("https://fonts.googleapis.com/css?family=Google+Sans:200,300,400,500,600,700,900");
 
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
 *,
 *::before,
 *::after {
@@ -9,9 +11,9 @@
 }
 
 body {
-  font-family: "Google Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
-    "Helvetica Neue", sans-serif;
+  font-family: "Quicksand", "Google Sans", -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -102,7 +104,7 @@ a {
 @media screen and (min-width: 568px) {
   :root {
     --bg-color: #222;
-    font-size: 22px;
+    // font-size: 22px;
   }
 }
 
@@ -110,7 +112,7 @@ a {
 @media screen and (min-width: 768px) {
   :root {
     --bg-color: #333;
-    font-size: 24px;
+    // font-size: 24px;
   }
 }
 
@@ -118,7 +120,7 @@ a {
 @media screen and (min-width: 992px) {
   :root {
     --bg-color: violet;
-    font-size: 30px;
+    // font-size: 30px;
   }
 }
 
@@ -126,6 +128,6 @@ a {
 @media screen and (min-width: 1200px) {
   :root {
     --bg-color: violet;
-    font-size: 40px;
+    // font-size: 40px;
   }
 }
