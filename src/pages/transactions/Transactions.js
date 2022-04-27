@@ -1,9 +1,32 @@
 import TicketsDataCard from "components/tickets-data-card/TicketsDataCard";
 import transactionsStyles from "./transactions.module.scss";
+import TextField from "@mui/material/TextField";
 
 const Transactions = () => {
   return (
     <div className={transactionsStyles.transactions}>
+      <div className={transactionsStyles.duration}>
+        <TextField
+          id="date"
+          label="from"
+          type="date"
+          defaultValue="2017-05-24"
+          sx={{ width: 220 }}
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+        <TextField
+          id="date"
+          label="to"
+          type="date"
+          defaultValue="2017-05-24"
+          sx={{ width: 220 }}
+          InputLabelProps={{
+            shrink: true,
+          }}
+        />
+      </div>
       <div className={transactionsStyles.summary}>
         <TicketsDataCard
           label="No. of tickets sold"
