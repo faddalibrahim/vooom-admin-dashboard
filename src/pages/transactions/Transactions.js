@@ -5,15 +5,27 @@ import TextField from "@mui/material/TextField";
 import { useState } from "react";
 
 import { ticketsData } from "./mockData";
-import BarChart from "components/bar-chat/BarChart";
+import BarChart from "components/charts/BarChart";
+import LineChart from "components/charts/LineChart";
+import PieChart from "components/charts/PieChart";
 
 const Transactions = () => {
+  const initialRandom = Math.floor(Math.random() * ticketsData.length);
+
+  const [sold, setSold] = useState(
+    ticketsData[initialRandom][0].quantity +
+      ticketsData[initialRandom][1].quantity
+  );
+  const [amount, setAmount] = useState(
+    ticketsData[initialRandom][0].amount + ticketsData[initialRandom][1].amount
+  );
+
   const [ticketsDataa, setTicketsDataa] = useState({
-    labels: ticketsData.map((data) => data.ticketType),
+    labels: ticketsData[0].map((data) => data.ticketType),
     datasets: [
       {
         label: "tickets",
-        data: ticketsData.map((data) => data.quantity),
+        data: ticketsData[initialRandom].map((data) => data.quantity),
         backgroundColor: ["#456990", "#ef767a"],
         borderColor: "#111",
         borderWidth: 2.5,
@@ -32,6 +44,28 @@ const Transactions = () => {
           InputLabelProps={{
             shrink: true,
           }}
+          onChange={() => {
+            const curr = Math.floor(Math.random() * ticketsData.length);
+            setTicketsDataa({
+              labels: ticketsData[0].map((data) => data.ticketType),
+              datasets: [
+                {
+                  label: "tickets",
+                  data: ticketsData[curr].map((data) => data.quantity),
+                  backgroundColor: ["#456990", "#ef767a"],
+                  borderColor: "#111",
+                  borderWidth: 2.5,
+                },
+              ],
+            });
+
+            setAmount(
+              ticketsData[curr][0].amount + ticketsData[curr][1].amount
+            );
+            setSold(
+              ticketsData[curr][0].quantity + ticketsData[curr][1].quantity
+            );
+          }}
         />
         <TextField
           id="date"
@@ -42,27 +76,40 @@ const Transactions = () => {
           InputLabelProps={{
             shrink: true,
           }}
+          onChange={() => {
+            const curr = Math.floor(Math.random() * ticketsData.length);
+            setTicketsDataa({
+              labels: ticketsData[0].map((data) => data.ticketType),
+              datasets: [
+                {
+                  label: "tickets",
+                  data: ticketsData[curr].map((data) => data.quantity),
+                  backgroundColor: ["#456990", "#ef767a"],
+                  borderColor: "#111",
+                  borderWidth: 2.5,
+                },
+              ],
+            });
+            setAmount(
+              ticketsData[curr][0].amount + ticketsData[curr][1].amount
+            );
+            setSold(
+              ticketsData[curr][0].quantity + ticketsData[curr][1].quantity
+            );
+          }}
         />
       </div>
       <div className={transactionsStyles.summary}>
-        <TicketsDataCard
-          label="No. of tickets sold"
-          value="45"
-          backgroundColor="rgba(245, 246, 151, 0.55)"
-        />
-        <TicketsDataCard
-          label="Expected Amount"
-          value="$3000"
-          backgroundColor="#ECC5FA"
-        />
-        <TicketsDataCard
-          label="Total Credit"
-          value="$700"
-          backgroundColor="#C5DDFA"
-        />
+        <TicketsDataCard label="No. of tickets sold" value={sold} />
+        <TicketsDataCard value={amount} label="Expected Amount (cedis)" />
+        <TicketsDataCard label="Total Credit (cedis)" value="700" />
       </div>
       <div className={transactionsStyles.more}>
         <BarChart chartData={ticketsDataa} />
+        {/* <LineChart chartData={ticketsDataa} /> */}
+        {/* <div style={{ width: "50%" }}>
+          <PieChart chartData={ticketsDataa} />
+        </div> */}
       </div>
     </div>
   );

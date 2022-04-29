@@ -11,13 +11,13 @@ const Home = () => {
       </div>
       <div className={homeStyles.uses}>
         <div>
-          <strong>Draw Insights</strong>
+          <strong>Manage Data</strong>
           <AnalyticsSvg1 />
         </div>
-        {/* <div>
+        <div>
           <AnalyticsSvg2 />
-          <strong>draw insights</strong>
-        </div> */}
+          <strong>Draw Insights</strong>
+        </div>
         <div>
           <strong>Manage Personnel</strong>
           <AnalyticsSvg3 />
