@@ -13,7 +13,7 @@ import Sidebar from "components/sidebar/Sidebar";
 
 function App() {
   return (
-    <Router>
+    <Router style={{overflowY: "hiddden"  }}>
       <div style={{ display: "flex" }}>
         <Sidebar />
         <Routes>
