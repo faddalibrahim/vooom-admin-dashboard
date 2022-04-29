@@ -29,6 +29,7 @@
 #edit_driver {
     font-size: 1.5rem;
     font-weight: bold;
+    color: #934444;
 }
 
 .fields_ {
@@ -36,7 +37,7 @@
     margin-top: 10px;
 }
 
-input {
+input,#gender {
     box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
     width: 95.5%;
     height: 30px;
@@ -51,6 +52,7 @@ input {
 
 label {
     color: rgba(0, 0, 0, 0.5);
+    font-size: small;
 }
 
 

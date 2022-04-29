@@ -23,7 +23,11 @@ const EditDriver = ({togglePage, handleClose, nameChanged, dobChanged, newTel, n
                     <label for="dob">New Date of Birth*</label> <br />
                     <input type="date"id='dob' onChange={dobChanged} value={ newDOB}/> <br />
                     <label for="gender">Gender*</label> <br />
-                    <input type="text" id='gender' onChange={genChanged} value={ newG}/> <br />
+                    <select id="gender" id= "gender" onChange={genChanged}>
+                      <option value="Male">Male</option>
+                      <option value="Female">Female</option>
+                      <option value="Other">Other</option>
+                    </select> <br />
                     <label for="tel" >New Telephone*</label> <br />
                     <input type="tel"id='tel' onChange={telChanged} value={ newTel}/>
                 </div>

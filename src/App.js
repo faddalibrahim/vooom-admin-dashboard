@@ -1,11 +1,6 @@
 //libraries
 import * as React from "react";
-import {
-  BrowserRouter as Router,
-  Routes,
-  Route,
-  NavLink,
-} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 // pages
 import Playground from "pages/playground/Playground";

@@ -2,7 +2,24 @@ import TicketsDataCard from "components/tickets-data-card/TicketsDataCard";
 import transactionsStyles from "./transactions.module.scss";
 import TextField from "@mui/material/TextField";
 
+import { useState } from "react";
+
+import { ticketsData } from "./mockData";
+import BarChart from "components/bar-chat/BarChart";
+
 const Transactions = () => {
+  const [ticketsDataa, setTicketsDataa] = useState({
+    labels: ticketsData.map((data) => data.ticketType),
+    datasets: [
+      {
+        label: "tickets",
+        data: ticketsData.map((data) => data.quantity),
+        backgroundColor: ["#456990", "#ef767a"],
+        borderColor: "#111",
+        borderWidth: 2.5,
+      },
+    ],
+  });
   return (
     <div className={transactionsStyles.transactions}>
       <div className={transactionsStyles.duration}>
@@ -44,7 +61,9 @@ const Transactions = () => {
           backgroundColor="#C5DDFA"
         />
       </div>
-      <div className={transactionsStyles.more}></div>
+      <div className={transactionsStyles.more}>
+        <BarChart chartData={ticketsDataa} />
+      </div>
     </div>
   );
 };

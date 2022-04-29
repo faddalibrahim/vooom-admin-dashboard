@@ -1,6 +1,5 @@
 .transactions {
   padding: 2rem;
-  // display: flex;
   display: grid;
   grid-template-columns: 15% 85%;
   grid-template-rows: 12% 88%;
@@ -9,8 +8,9 @@
 }
 
 .duration {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 40% 30%;
+  justify-content: center;
   grid-column: span 3;
   background-color: white;
 }
@@ -23,4 +23,7 @@
 .more {
   border-radius: 1rem;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  padding: 2.5rem;
+  display: grid;
+  place-items: center;
 }

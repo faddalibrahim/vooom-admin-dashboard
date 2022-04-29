@@ -86,7 +86,7 @@ const AllBuses = () => {
 
     const addBus = (e) => {
         e.preventDefault()
-        setBuses([...buses, newBus])
+        setBuses([newBus, ...buses])
         setEditAdd(!editAdd)
     }
     

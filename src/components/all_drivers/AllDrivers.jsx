@@ -32,6 +32,11 @@ const AllDrivers = () => {
         tel: "",
     })
 
+    const [dob, setDOB] = React.useState({
+        new_: "",
+        update: ""
+    })
+
     const [editPage_, setEditPage] = React.useState(false)
     const [editAdd, setEditAdd] = React.useState(false)
 
@@ -50,10 +55,10 @@ const AllDrivers = () => {
         setAddDriver({...newDriver, name: e.target.value})
     } 
     const addNewDOB = (e) => {
-        let dob = e.target.value.slice(0, 4)
-        let age = parseInt(new Date().getFullYear() - parseInt(dob))
-        console.log(age)
-        
+        setDOB({...dob, new_: e.target.value})
+        let dob_ = dob.new_.slice(0, 4)
+        let age = parseInt(new Date().getFullYear()) - parseInt(dob_)
+
         setAddDriver({...newDriver, age: age})
     } 
     const addNewGender = (e) => {
@@ -86,8 +91,10 @@ const AllDrivers = () => {
     }
     
     const updateDOB = (e) => {
-        let dob = new Date().getFullYear() - e.target.value.getFullYear()
-        setDriverUpdate({ ...updateDriver, age: dob })
+        setDOB({...dob, update: e.target.value})
+        let dob_ = dob.update.slice(0, 4)
+        let age = parseInt(new Date().getFullYear()) - parseInt(dob_)
+        setDriverUpdate({ ...updateDriver, age: age })
     }
 
     const doUpdate = (e) => {
@@ -109,7 +116,7 @@ const AllDrivers = () => {
 
     const addDriver = (e) => {
         e.preventDefault()
-        setDrivers([...drivers, newDriver])
+        setDrivers([ newDriver, ...drivers])
         setEditAdd(!editAdd)
     }
 
@@ -139,7 +146,7 @@ const AllDrivers = () => {
                                 handleClose={editDriver}
                                 saved={doUpdate}
                                 newFName={updateDriver.name}
-                                newDOB={updateDriver.age}
+                                newDOB={dob.update}
                                 newG={updateDriver.gender}
                                 newTel={updateDriver.tel}
                                 nameChanged={updateName}
@@ -160,7 +167,7 @@ const AllDrivers = () => {
                                 name={newDriver.name}
                                 tel={newDriver.tel}
                                 gen={newDriver.gender}
-                                dob={newDriver.age} 
+                                dob={dob.new_} 
                                 add = {addDriver}
                             />
                         </div>
