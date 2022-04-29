@@ -15,6 +15,8 @@ const Transactions = () => {
         label: "tickets",
         data: ticketsData.map((data) => data.quantity),
         backgroundColor: ["#456990", "#ef767a"],
+        borderColor: "#111",
+        borderWidth: 2.5,
       },
     ],
   });
