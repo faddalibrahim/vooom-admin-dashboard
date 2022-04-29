@@ -1,0 +1,58 @@
+.bus_comp {
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    padding: 12px;
+    margin: 5px 0 4%;
+    width: 95%;
+    overflow: hidden;
+    border-radius: 5px;
+    
+    border-left: 2px solid #a16262;
+}
+
+.bus_info {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info_bus {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#thebus {
+    width: 300px;
+}
+
+.bus_sec p {
+    color: #934444;
+    font-size: large;
+    font-weight: 400;
+    margin-bottom: 10px;
+}
+
+.bus_sec button {
+    width: 70px;
+    color: #fff;
+    height: 29px;
+    border-radius: 4px;
+    margin-top: 20px;
+    font-weight: bold;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px; 
+    cursor: pointer;
+}
+
+.bus_sec button:hover  {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+#edit {
+    background-color: #0000FF;
+}
+
+#delete {
+    background-color: #934444;
+}

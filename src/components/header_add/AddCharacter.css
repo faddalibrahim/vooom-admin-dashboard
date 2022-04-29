@@ -1,0 +1,26 @@
+
+.header_add {
+    background-color: fff;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    width: 95%;
+    display: flex;
+    justify-content: space-between;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+#character {
+    font-size: larger;
+    font-weight: 450;
+    color: black;
+}
+
+#add {
+    width: 25px;
+    cursor: pointer;
+}
+
+#add:hover {
+    transition: 0.5s ease-in;
+    transform: scale(1.1);
+}
