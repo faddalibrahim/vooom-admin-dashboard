@@ -1,0 +1,71 @@
+.edit_driver {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.edit_new_driver {
+    background-color: #fff;
+    box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
+    border-radius: 10px;
+    width: 350px;
+    height: 450px;
+    padding: 15px;
+}
+
+#closure_ {
+    display: flex;
+    justify-content: end;
+    margin-bottom: 25px;
+}
+
+#close {
+    width: 22px;
+    cursor: pointer;
+}
+
+#edit_driver {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.fields_ {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    box-shadow: rgb(204, 219, 232) 3px 3px 6px 0px inset, rgba(255, 255, 255, 0.5) -3px -3px 6px 1px inset;
+    width: 95.5%;
+    height: 30px;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    border: 1px solid #934444;
+    padding: 0 5px;
+    color: rgba(0, 0, 0, 0.5);
+    outline-color: #934444;
+    transition: 2s ease-in-out;
+}
+
+label {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.now_edit_ {
+    margin-top: 8%;
+    display: flex;
+    justify-content: center;
+}
+
+#now_edit {
+    width: 100px;
+    height: 40px;
+    border-radius: 5px;
+    color: #fff;
+    background-color: #934444;
+    font-size: large;
+    font-weight: bold;
+}

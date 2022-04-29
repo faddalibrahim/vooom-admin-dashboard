@@ -1,0 +1,51 @@
+.sum_buses {
+    width: 40%;
+    margin: 25px 0 0 15px;
+}
+
+#sum_head {
+    font-weight: 500;
+    font-size: larger;
+    color: #934444;
+    margin-bottom: 5%;
+    margin-left: 15%;
+}
+
+.sum_stats {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+}
+
+.stats, .sum_note {
+    margin: 0 auto;
+    width: 70%;
+    height: 175px;
+    align-items: center;
+    justify-content: center;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    border-radius: 10px;
+}
+
+.stats, .sum_note {
+    padding: 40px 20px;
+    border-left: 5px solid #a16262;
+}
+
+#length, #length_op {
+    color: black;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+#len_mes, #len_mes_op {
+    color: black;
+    font-size: 1rem;
+    opacity: 0.5;
+}
+
+.sum_note {
+    width: 70%;
+    height: 190px;
+    margin-top: 5%;
+}

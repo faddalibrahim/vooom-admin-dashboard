@@ -1,0 +1,58 @@
+.driver_comp {
+    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px; */
+    padding: 15px;
+    margin: 5px 0 4%;
+    width: 95%;
+    overflow: hidden;
+    border-radius: 5px;
+    box-shadow: rgb(0 0 0 / 10%) 0px 4px 12px;
+    border-left: 2px solid #a16262;
+}
+
+.driver_info {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.info_driver {
+    width: 45%;
+    display: flex;
+    justify-content: space-between;
+}
+
+#thedriver {
+    width: 200px;
+}
+
+.driver_sec p {
+    color: #934444;
+    font-size: large;
+    font-weight: 400;
+    margin-bottom: 17px;
+}
+
+.driver_sec button {
+    width: 70px;
+    color: #fff;
+    height: 29px;
+    border-radius: 4px;
+    margin-top: 40px;
+    font-weight: bold;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 2px 0px;
+    cursor: pointer;
+}
+
+.driver_sec button:hover  {
+    transition: 0.5s ease-in-out;
+    transform: scale(1.1);
+}
+
+#edit {
+    background-color: #0000FF;
+}
+
+#delete {
+    background-color: #934444;
+}
