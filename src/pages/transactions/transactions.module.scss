@@ -9,8 +9,9 @@
 }
 
 .duration {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 40% 30%;
+  justify-content: center;
   grid-column: span 3;
   background-color: white;
 }

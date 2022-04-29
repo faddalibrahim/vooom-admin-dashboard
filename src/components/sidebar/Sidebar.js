@@ -22,8 +22,9 @@ export default function Sidebar() {
             to={`/${route.name}`}
             key={route.name}
             style={({ isActive }) => ({
-              color: isActive ? "#934444" : "#333",
-              backgroundColor: isActive ? "rgba(147, 68, 68, 0.1)" : "",
+              color: isActive ? "#ECC5FA" : "#aaa",
+              backgroundColor: isActive ? "rgba(236, 197, 250, 0.1)" : "",
+              fontSize: isActive ? "130%" : "100%",
             })}
           >
             {route.icon}
