@@ -12,8 +12,9 @@ const Transactions = () => {
     labels: ticketsData.map((data) => data.ticketType),
     datasets: [
       {
-        label: "No of each tickets",
+        label: "tickets",
         data: ticketsData.map((data) => data.quantity),
+        backgroundColor: ["#456990", "#ef767a"],
       },
     ],
   });
