@@ -13,7 +13,7 @@ import Sidebar from "components/sidebar/Sidebar";
 
 function App() {
   return (
-    <Router style={{overflowY: "hiddden"  }}>
+    <Router style={{ overflowY: "hiddden" }}>
       <div style={{ display: "flex" }}>
         <Sidebar />
         <Routes>
@@ -21,7 +21,7 @@ function App() {
           <Route path="/transactions" element={<Transactions />} />
           <Route path="/buses" element={<Buses />} />
           <Route path="/drivers" element={<Drivers />} />
-          <Route path="/" element={<Playground />} />
+          <Route path="/" element={<Home />} />
           <Route path="*" element={<Error404 />} />
         </Routes>
       </div>
